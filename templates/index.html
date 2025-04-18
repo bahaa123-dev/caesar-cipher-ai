@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caesar Cipher AI Decrypter</title>
+</head>
+<body>
+    <h2>🔐 Caesar Cipher Brute-Force</h2>
+    <form method="POST">
+        <label>Enter Encrypted Text (no spaces):</label><br>
+        <input type="text" name="ciphertext" style="width:400px;" required><br><br>
+        <input type="submit" value="Decrypt">
+    </form>
+
+    {% if result %}
+        <h3>🧠 Result</h3>
+        <p><strong>Decrypted Text:</strong> {{ result.plaintext }}</p>
+        <p><strong>Detected Shift:</strong> {{ result.shift }}</p>
+        <p><strong>Score:</strong> {{ result.score }}</p>
+    {% endif %}
+</body>
+</html>
